@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Header from "./components/header";
 
 export default function Home() {
   console.log("I am being executing on server ");
@@ -6,9 +7,8 @@ export default function Home() {
   return (
     <main>
       <img src="/logo.png" alt="A server surrounded by magic sparkles." />
-      <h1>Welcome to this NextJS Course!</h1>
-      <p>🔥 Let&apos;s get started! 🔥</p>
 
+      <Header />
       {/* flaw  */}
       <a href="/about">
         <div className=" text-green-600 text-4xl font-bold">
@@ -16,7 +16,7 @@ export default function Home() {
         </div>
       </a>
 
-      <Link href='/about'>
+      <Link href="/about">
         <div className=" text-green-600 text-4xl font-bold">
           Navigation using 'Link tag{" "}
         </div>
