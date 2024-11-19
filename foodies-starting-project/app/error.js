@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const Error = (data) => {
-  console.log('Error', data);
+  console.log('Error', data.error);
   
   return (
     <div className=" flex flex-col">
