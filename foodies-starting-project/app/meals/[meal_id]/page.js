@@ -37,13 +37,6 @@ const Page = ({ params }) => {
     <div className="flex flex-col gap-y-4">
       <div className="text-white">I am the dynamic meal page - {meal_id}</div>
       <div>
-        <input
-          type="file"
-          accept="image/png, image/gif, image/jpeg"
-          ref={fileRef}
-          onChange={fileHandler}
-        />
-
         {/* Conditionally render the Image */}
         {imageFile ? (
           <Image
@@ -53,24 +46,36 @@ const Page = ({ params }) => {
             height={200}
           />
         ) : (
-          <div className="text-gray-500">No image selected</div>
+          <div className="text-white">No image selected</div>
         )}
 
         {/* form  */}
 
         <form action={formSubmitHandler}>
-        <div>
-          <label htmlFor="username">Username</label>
-          <input type="text" id="username" name="username" required />
-        </div>
-        <div>
-          <label htmlFor="email">E-Mail</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-
-      
+          <div>
+            <input
+              type="file"
+              accept="image/png, image/gif, image/jpeg"
+              ref={fileRef}
+              onChange={fileHandler}
+              id="img"
+              name="img"
+            />
+            <label className=" text-white" htmlFor="username">
+              Username
+            </label>
+            <input type="text" id="username" name="username" required />
+          </div>
+          <div>
+            <label className=" text-white" htmlFor="email">
+              E-Mail
+            </label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <button className=" text-white" type="submit">
+            Submit
+          </button>
+        </form>
       </div>
     </div>
   );
