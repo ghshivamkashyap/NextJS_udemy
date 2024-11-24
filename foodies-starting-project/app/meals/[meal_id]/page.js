@@ -1,57 +1,5 @@
-// "use client";
-// import Image from "next/image";
-// import { notFound } from "next/navigation";
-// import React, { useRef, useState } from "react";
-
-// const page = (props) => {
-//   // console.log(props);
-
-//   if (props.params.meal_id == 0) {
-//     notFound();
-//   }
-
-//   const fileRef = useRef();
-//   const [imageFile, setImageFile] = useState(null);
-
-//   const fileHandler = () => {
-//     console.log("File is:  ", fileRef.current.files[0]);
-//     const file = fileRef.current.files[0];
-
-//     if (!file) return;
-
-//     const fileReaqder = new FileReader();
-
-//     fileReaqder.onload = () => {
-//       console.log(fileReaqder.result);
-//       setImageFile(fileReaqder.result);
-//     };
-
-//     fileReaqder.readAsDataURL(file);
-//   };
-
-//   return (
-//     <div className=" flex flex-col gap-y-4">
-//       <div className=" text-white">
-//         i am dynamic meal page - {props.params.meal_id}
-//       </div>
-//       <div>
-//         <input
-//           type="file"
-//           accept="image/png, image/gif, image/jpeg"
-//           ref={fileRef}
-//           onChange={fileHandler}
-//         />
-
-//         <Image src={imageFile} alt="No image selected" />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default page;
-
 "use client";
-
+import UserForm, { formSubmitHandler } from "@/app/components/userForm";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 
@@ -107,6 +55,22 @@ const Page = ({ params }) => {
         ) : (
           <div className="text-gray-500">No image selected</div>
         )}
+
+        {/* form  */}
+
+        <form action={formSubmitHandler}>
+        <div>
+          <label htmlFor="username">Username</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div>
+          <label htmlFor="email">E-Mail</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+
+      
       </div>
     </div>
   );
