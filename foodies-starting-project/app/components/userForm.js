@@ -22,4 +22,5 @@ export const formSubmitHandler = async (formData) => {
 
   console.log("Form Data:", { username, email, imageUrl });
 
+  return { success: true, name: username, email: email, imahe: imageUrl };
 };

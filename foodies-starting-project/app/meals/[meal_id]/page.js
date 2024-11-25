@@ -6,6 +6,8 @@ import React, { useRef, useState } from "react";
 // Component Function
 const Page = ({ params }) => {
   const { meal_id } = params;
+  const fileRef = useRef();
+  const [imageFile, setImageFile] = useState(null);
 
   // Guard against invalid meal_id (Only Server-Side Logic should ideally use `notFound()`)
   if (parseInt(meal_id) === 0) {
@@ -16,8 +18,7 @@ const Page = ({ params }) => {
     );
   }
 
-  const fileRef = useRef();
-  const [imageFile, setImageFile] = useState(null);
+
 
   const fileHandler = () => {
     const file = fileRef.current.files[0];
@@ -32,6 +33,7 @@ const Page = ({ params }) => {
 
     fileReader.readAsDataURL(file);
   };
+  
 
   return (
     <div className="flex flex-col gap-y-4">
