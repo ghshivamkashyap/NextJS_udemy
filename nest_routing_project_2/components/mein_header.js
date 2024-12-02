@@ -19,10 +19,15 @@ function MainHeader() {
             <Link href="/">
               <div className={styles.link}>Home</div>
             </Link>
-          </li>
+          </li>{" "}
           <li className={styles.li}>
             <Link href="/news">
               <div className={styles.link}>News</div>
+            </Link>
+          </li>
+          <li className={styles.li}>
+            <Link href="/archive">
+              <div className={styles.link}>Archive</div>
             </Link>
           </li>
         </ul>

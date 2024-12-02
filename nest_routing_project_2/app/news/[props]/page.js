@@ -1,4 +1,5 @@
 import { DUMMY_NEWS } from "@/dummy-news";
+import { notFound } from "next/navigation";
 import React from "react";
 
 const SingleNews = (params) => {
@@ -8,13 +9,14 @@ const SingleNews = (params) => {
   console.log("News Item: ", newsItem);
 
   if (!newsItem) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <p className="text-xl font-semibold text-red-600">
-          News item not found!
-        </p>
-      </div>
-    );
+    // return (
+    //   <div className="flex justify-center items-center h-screen">
+    //     <p className="text-xl font-semibold text-red-600">
+    //       News item not found!
+    //     </p>
+    //   </div>
+    // );
+    notFound();
   }
 
   return (
