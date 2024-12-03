@@ -1,8 +1,8 @@
 {
-  "/news/[props]/page": "app/news/[props]/page.js",
-  "/news/page": "app/news/page.js",
   "/page": "app/page.js",
+  "/not-found": "app/not-found.js",
   "/icon.jpg/route": "app/icon.jpg/route.js",
+  "/archive/@latest/page": "app/archive/@latest/page.js",
   "/archive/@archive/page": "app/archive/@archive/page.js",
-  "/archive/@latest/page": "app/archive/@latest/page.js"
+  "/archive/@archive/[year]/page": "app/archive/@archive/[year]/page.js"
 }
