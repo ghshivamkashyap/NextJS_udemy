@@ -1,6 +1,5 @@
 {
-  "/page": "app/page.js",
-  "/intercept_route/(.)item/page": "app/intercept_route/(.)item/page.js",
-  "/intercept_route/item/page": "app/intercept_route/item/page.js",
-  "/archive/@archive/page": "app/archive/@archive/page.js"
+  "/(content)/news/page": "app/(content)/news/page.js",
+  "/(landing_page)/page": "app/(landing_page)/page.js",
+  "/(content)/news/[props]/page": "app/(content)/news/[props]/page.js"
 }

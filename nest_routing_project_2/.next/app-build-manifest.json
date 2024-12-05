@@ -1,50 +1,41 @@
 {
   "pages": {
-    "/page": [
+    "/(landing_page)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/(landing_page)/page.js"
     ],
-    "/layout": [
+    "/(landing_page)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
+      "static/css/app/(landing_page)/layout.css",
+      "static/chunks/app/(landing_page)/layout.js"
     ],
-    "/not-found": [
+    "/(content)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/css/app/(content)/layout.css",
+      "static/chunks/app/(content)/layout.js"
     ],
-    "/archive/layout": [
+    "/(content)/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/archive/layout.js"
+      "static/chunks/app/(content)/not-found.js"
     ],
-    "/archive/@archive/page": [
+    "/(content)/news/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/archive/@archive/page.js"
+      "static/chunks/app/(content)/news/page.js"
     ],
-    "/archive/@latest/page": [
+    "/(content)/news/[props]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/archive/@latest/page.js"
+      "static/chunks/app/(content)/news/[props]/page.js"
     ],
-    "/news/page": [
+    "/(content)/intercept_route/item/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/news/page.js"
-    ],
-    "/intercept_route/item/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/intercept_route/item/page.js"
-    ],
-    "/intercept_route/(.)item/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/intercept_route/(.)item/page.js"
+      "static/chunks/app/(content)/intercept_route/item/page.js"
     ]
   }
 }
