@@ -3,7 +3,7 @@ import React from "react";
 const ItemRoute = () => {
   return (
     <>
-      <h1> i am normal item</h1>
+      <h1>page to be shown in case on reload, link copy and paste</h1>
     </>
   );
 };
