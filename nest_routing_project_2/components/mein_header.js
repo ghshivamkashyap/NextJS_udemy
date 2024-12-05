@@ -29,6 +29,11 @@ function MainHeader() {
             <Link href="/archive">
               <div className={styles.link}>Archive</div>
             </Link>
+          </li>{" "}
+          <li className={styles.li}>
+            <Link href="/intercept_route/item">
+              <div className={styles.link}>Intercepted route</div>
+            </Link>
           </li>
         </ul>
       </nav>

@@ -21,20 +21,30 @@
       "static/chunks/main-app.js",
       "static/chunks/app/archive/layout.js"
     ],
-    "/archive/@latest/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/archive/@latest/page.js"
-    ],
     "/archive/@archive/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/archive/@archive/page.js"
     ],
-    "/archive/@archive/[year]/page": [
+    "/archive/@latest/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/archive/@archive/[year]/page.js"
+      "static/chunks/app/archive/@latest/page.js"
+    ],
+    "/news/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/news/page.js"
+    ],
+    "/intercept_route/item/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/intercept_route/item/page.js"
+    ],
+    "/intercept_route/(.)item/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/intercept_route/(.)item/page.js"
     ]
   }
 }

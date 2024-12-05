@@ -1,8 +1,7 @@
 {
   "/page": "app/page.js",
-  "/not-found": "app/not-found.js",
   "/icon.jpg/route": "app/icon.jpg/route.js",
-  "/archive/@latest/page": "app/archive/@latest/page.js",
-  "/archive/@archive/page": "app/archive/@archive/page.js",
-  "/archive/@archive/[year]/page": "app/archive/@archive/[year]/page.js"
+  "/intercept_route/item/page": "app/intercept_route/item/page.js",
+  "/intercept_route/(.)item/page": "app/intercept_route/(.)item/page.js",
+  "/archive/@archive/page": "app/archive/@archive/page.js"
 }
