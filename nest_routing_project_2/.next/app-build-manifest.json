@@ -32,11 +32,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(content)/news/[props]/page.js"
     ],
-    "/(content)/intercept_route/item/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(content)/intercept_route/item/page.js"
-    ],
     "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
