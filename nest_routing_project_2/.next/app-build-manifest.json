@@ -1,15 +1,9 @@
 {
   "pages": {
-    "/(landing_page)/page": [
+    "/(content)/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(landing_page)/page.js"
-    ],
-    "/(landing_page)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(landing_page)/layout.css",
-      "static/chunks/app/(landing_page)/layout.js"
+      "static/chunks/app/(content)/not-found.js"
     ],
     "/(content)/layout": [
       "static/chunks/webpack.js",
@@ -17,20 +11,15 @@
       "static/css/app/(content)/layout.css",
       "static/chunks/app/(content)/layout.js"
     ],
-    "/(content)/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(content)/not-found.js"
-    ],
     "/(content)/news/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(content)/news/page.js"
     ],
-    "/(content)/news/[props]/page": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(content)/news/[props]/page.js"
+      "static/chunks/app/not-found.js"
     ]
   }
 }
