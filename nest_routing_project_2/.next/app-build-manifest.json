@@ -16,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(content)/news/page.js"
     ],
-    "/not-found": [
+    "/(content)/loading": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/(content)/loading.js"
     ]
   }
 }

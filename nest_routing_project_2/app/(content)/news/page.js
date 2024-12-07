@@ -2,7 +2,7 @@ import { getAllNews } from "@/lib/news";
 import Link from "next/link";
 
 export default async function Newspage() {
-  const data = getAllNews();
+  const data =await getAllNews();
   return (
     <>
       <h1 className="">News Page</h1>
