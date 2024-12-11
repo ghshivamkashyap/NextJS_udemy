@@ -1,18 +1,25 @@
-import { storePost } from '@/lib/posts';
+import FormDynamicButtons from "@/components/formDynamicButtons";
+import { storePost } from "@/lib/posts";
+import { redirect } from "next/navigation";
 
 export default function NewPostPage() {
   async function createPost(formData) {
     "use server";
-    const title = formData.get('title');
-    const image = formData.get('image');
-    const content = formData.get('content');
+    const title = formData.get("title");
+    const image = formData.get("image");
+    const content = formData.get("content");
+    console.log("title:", title);
+    console.log("image:", image);
+    console.log("content:", content);
 
-    storePost({
-      imageUrl: '',
+    await storePost({
+      imageUrl: "",
       title,
       content,
-      userId: 1
-    })
+      userId: 1,
+    });
+
+    redirect("/");
   }
 
   return (
@@ -37,8 +44,7 @@ export default function NewPostPage() {
           <textarea id="content" name="content" rows="5" />
         </p>
         <p className="form-actions">
-          <button type="reset">Reset</button>
-          <button>Create Post</button>
+          <FormDynamicButtons />
         </p>
       </form>
     </>

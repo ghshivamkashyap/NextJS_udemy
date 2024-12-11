@@ -1,6 +1,6 @@
-import sql from 'better-sqlite3';
+import sql from "better-sqlite3";
 
-const db = new sql('posts.db');
+const db = new sql("posts.db");
 
 function initDb() {
   db.exec(`
@@ -30,7 +30,7 @@ function initDb() {
     )`);
 
   // Creating two dummy users if they don't exist already
-  const stmt = db.prepare('SELECT COUNT(*) AS count FROM users');
+  const stmt = db.prepare("SELECT COUNT(*) AS count FROM users");
 
   if (stmt.get().count === 0) {
     db.exec(`
@@ -48,11 +48,14 @@ function initDb() {
 initDb();
 
 export async function getPosts(maxNumber) {
-  let limitClause = '';
+  let limitClause = "";
 
   if (maxNumber) {
-    limitClause = 'LIMIT ?';
+    limitClause = "LIMIT ?";
   }
+
+  const data = db.prepare("SELECT * FROM posts").all();
+  console.log("All posts data: ", data);
 
   const stmt = db.prepare(`
     SELECT posts.id, image_url AS image, title, content, created_at AS createdAt, first_name AS userFirstName, last_name AS userLastName, COUNT(likes.post_id) AS likes, EXISTS(SELECT * FROM likes WHERE likes.post_id = posts.id and likes.user_id = 2) AS isLiked
@@ -71,6 +74,7 @@ export async function storePost(post) {
   const stmt = db.prepare(`
     INSERT INTO posts (image_url, title, content, user_id)
     VALUES (?, ?, ?, ?)`);
+
   await new Promise((resolve) => setTimeout(resolve, 1000));
   return stmt.run(post.imageUrl, post.title, post.content, post.userId);
 }
