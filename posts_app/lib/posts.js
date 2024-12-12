@@ -48,11 +48,7 @@ function initDb() {
 initDb();
 
 export async function getPosts(maxNumber) {
-  let limitClause = "";
 
-  if (maxNumber) {
-    limitClause = "LIMIT ?";
-  }
 
   const data = db.prepare("SELECT * FROM posts").all();
   console.log("All posts data: ", data);
@@ -64,10 +60,10 @@ export async function getPosts(maxNumber) {
     LEFT JOIN likes ON posts.id = likes.post_id
     GROUP BY posts.id
     ORDER BY createdAt DESC
-    ${limitClause}`);
+    `);
 
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-  return maxNumber ? stmt.all(maxNumber) : stmt.all();
+
+  return stmt.all();
 }
 
 export async function storePost(post) {

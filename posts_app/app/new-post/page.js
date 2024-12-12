@@ -1,4 +1,5 @@
 import FormDynamicButtons from "@/components/formDynamicButtons";
+import { uploadImage } from "@/lib/cloudinary";
 import { storePost } from "@/lib/posts";
 import { redirect } from "next/navigation";
 
@@ -12,8 +13,12 @@ export default function NewPostPage() {
     console.log("image:", image);
     console.log("content:", content);
 
+    let imageUri = await uploadImage(image);
+
+    console.log("imageUri:         ", imageUri);
+
     await storePost({
-      imageUrl: "",
+      imageUrl: imageUri,
       title,
       content,
       userId: 1,
