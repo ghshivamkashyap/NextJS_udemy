@@ -1,6 +1,7 @@
 import FormDynamicButtons from "@/components/formDynamicButtons";
 import { uploadImage } from "@/lib/cloudinary";
 import { storePost } from "@/lib/posts";
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export default function NewPostPage() {
@@ -23,7 +24,7 @@ export default function NewPostPage() {
       content,
       userId: 1,
     });
-
+    revalidatePath("/",'layout');
     redirect("/");
   }
 

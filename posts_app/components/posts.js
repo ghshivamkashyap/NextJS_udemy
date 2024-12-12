@@ -1,5 +1,8 @@
+// "use client";
 import { formatDate } from '@/lib/format';
 import LikeButton from './like-icon';
+import { updatePostLikeStatus } from '@/lib/posts';
+// import { useOptimistic } from 'react';
 
 function Post({ post }) {
   return (
@@ -19,7 +22,7 @@ function Post({ post }) {
             </p>
           </div>
           <div>
-            <LikeButton />
+            <LikeButton  />
           </div>
         </header>
         <p>{post.content}</p>
@@ -29,6 +32,7 @@ function Post({ post }) {
 }
 
 export default function Posts({ posts }) {
+  // useOptimistic(updatePostLikeStatus);
   if (!posts || posts.length === 0) {
     return <p>There are no posts yet. Maybe start sharing some?</p>;
   }
