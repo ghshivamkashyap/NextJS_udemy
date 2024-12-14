@@ -1,4 +1,7 @@
+import { unstable_noStore } from "next/cache";
+
 export default async function MessagesLayout({ children }) {
+  unstable_noStore();
   const response = await fetch("http://localhost:8080/messages", {
     cache: "no-store",
   });
