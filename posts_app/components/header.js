@@ -7,7 +7,7 @@ export default function Header() {
     <header id="main-header">
       <Link href="/">
         {/* <img src={logo.src} alt="Mobile phone with posts feed on it" /> */}
-        <Image src={logo} alt="Mobile phone with posts feed on it" />
+        <Image  src={logo} alt="Mobile phone with posts feed on it" />
       </Link>
       <nav>
         <ul>

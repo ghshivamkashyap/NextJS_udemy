@@ -2,13 +2,15 @@
 import { formatDate } from '@/lib/format';
 import LikeButton from './like-icon';
 import { updatePostLikeStatus } from '@/lib/posts';
+import Image from 'next/image';
 // import { useOptimistic } from 'react';
 
 function Post({ post }) {
   return (
     <article className="post">
       <div className="post-image">
-        <img src={post.image} alt={post.title} />
+        {/* <img src={post.image} alt={post.title} /> */}
+        <Image src={post.image} fill alt={post.title}  />
       </div>
       <div className="post-content">
         <header>
