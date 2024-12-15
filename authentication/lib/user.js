@@ -1,0 +1,11 @@
+import db from "./db";
+
+export const createuser = async (email, password) => {
+
+  
+  const result = db
+    .prepare("INSERT INTO users (email, password) VALUES (?, ?)")
+    .run(email, password);
+
+  return result;
+};
