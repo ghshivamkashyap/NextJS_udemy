@@ -8,6 +8,11 @@ async function LatestPosts() {
   return <Posts posts={latestPosts} />;
 }
 
+export const metadata = {
+  title: 'Posts',
+  description: 'Welcome back! Here\'s what you might\'ve missed.',
+};
+
 export default async function Home() {
   return (
     <>

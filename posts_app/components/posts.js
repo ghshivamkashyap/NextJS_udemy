@@ -10,7 +10,7 @@ function Post({ post }) {
     <article className="post">
       <div className="post-image">
         {/* <img src={post.image} alt={post.title} /> */}
-        <Image src={post.image} fill alt={post.title}  />
+        <Image  src={post.image} fill alt={post.title}  />
       </div>
       <div className="post-content">
         <header>
