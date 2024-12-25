@@ -1,6 +1,16 @@
-import { getTrainings } from '@/lib/training';
+import { varifyAuthSession } from "@/lib/auth";
+import { getTrainings } from "@/lib/training";
+import { redirect } from "next/navigation";
 
 export default async function TrainingPage() {
+  const result = await varifyAuthSession();
+
+  if (!result.user) {
+    console.log("no user");
+
+    return redirect("/");
+  }
+
   const trainingSessions = getTrainings();
 
   return (
