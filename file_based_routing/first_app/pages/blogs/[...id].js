@@ -9,6 +9,7 @@ const BlogPage = () => {
   return (
     <div>
       <h1>Blog Page</h1>
+      <button onClick={() => router.push("/")}>Go to Home</button>
     </div>
   );
 };

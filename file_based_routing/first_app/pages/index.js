@@ -6,7 +6,7 @@ const HomePage = () => {
       <h1 className=" text-3xl">Home Page</h1>
       <ul>
         <li>
-          <Link href="/blogs/s654e5g">Blogs</Link>
+          <Link  href="/blogs/s654e5g">Blogs</Link>
         </li>
       </ul>
     </>
