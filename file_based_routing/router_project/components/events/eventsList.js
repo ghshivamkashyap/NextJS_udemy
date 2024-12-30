@@ -23,7 +23,9 @@ const EventsList = (props) => {
             <p className="text-gray-700 mb-2">{event.date}</p>
             <p className="text-gray-700 mb-2">{event.location}</p>
             <p className="text-gray-600">{event.description}</p>
-            <Link href={`/events/${event.id}`}>Explore event</Link>
+            <Link className={classes.item} href={`/events/${event.id}`}>
+              Explore event
+            </Link>
           </div>
         </div>
       ))}
