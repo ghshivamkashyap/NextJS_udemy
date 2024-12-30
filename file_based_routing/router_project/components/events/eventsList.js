@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import classes from "./eventList.module.css";
 
 const EventsList = (props) => {
   const { items } = props;
