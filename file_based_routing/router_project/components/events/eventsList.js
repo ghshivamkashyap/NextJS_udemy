@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const EventsList = (props) => {
@@ -21,6 +22,7 @@ const EventsList = (props) => {
             <p className="text-gray-700 mb-2">{event.date}</p>
             <p className="text-gray-700 mb-2">{event.location}</p>
             <p className="text-gray-600">{event.description}</p>
+            <Link href={`/events/${event.id}`}>Explore event</Link>
           </div>
         </div>
       ))}
